@@ -23,6 +23,14 @@ public class PlayerController : MonoBehaviour
         {
             _teleport.Back();
         }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            _timeController.SetLight();
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            _timeController.SetNight();
+        }
         // Start/Stop time, day/night cycle
         if (Input.GetKeyDown(KeyCode.Space))
         {

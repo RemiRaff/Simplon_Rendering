@@ -55,12 +55,11 @@ public class TimeController : MonoBehaviour
     private void UpdateTimeOfDay()
     {
         _currentTime = _currentTime.AddSeconds(Time.deltaTime * _timeMultiplier);
-        Debug.Log($"{_currentTime.ToString("HH:mm")}");
     }
 
     private TimeSpan CalculateTimeDifference(TimeSpan fromTime, TimeSpan toTime)
     {
-        TimeSpan difference =  toTime - fromTime;
+        TimeSpan difference = toTime - fromTime;
 
         if (difference.TotalSeconds < 0)
         {
@@ -95,7 +94,7 @@ public class TimeController : MonoBehaviour
 
     private void UpdateLightSettings()
     {
-        float dotProduct = Vector3.Dot(_sunLight.transform.forward, Vector3.down); // -1 < float < 1
+        float dotProduct = Vector3.Dot(_sunLight.transform.forward, Vector3.down);
         _sunLight.intensity = Mathf.Lerp(0, _maxSunLightIntensity, _lightChangeCurve.Evaluate(dotProduct));
         _moonLight.intensity = Mathf.Lerp(_maxMoonLightIntensity, 0, _lightChangeCurve.Evaluate(dotProduct));
         RenderSettings.ambientLight = Color.Lerp(_nightAmbientLight, _dayAmbientLight, _lightChangeCurve.Evaluate(dotProduct));
@@ -109,10 +108,23 @@ public class TimeController : MonoBehaviour
     public void StartTime()
     {
         _isRunning = true;
+        _currentTime = DateTime.Now.Date + TimeSpan.FromHours(_startHour);
     }
 
     public bool IsRunning()
     {
         return _isRunning;
     }
+
+    public void SetNight()
+    {
+        _sunLight.intensity = 0;
+        _startHour = 0;
+    }
+
+    public void SetLight()
+    {
+        _sunLight.intensity = 2;
+        _startHour = 12;
+    }    
 }

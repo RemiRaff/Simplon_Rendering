@@ -20,12 +20,12 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1.5
+  m_AmbientIntensity: 0.25
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 7ffc564429f3b9147ac0ada60e84990d, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -3596,7 +3596,7 @@ Transform:
   m_GameObject: {fileID: 356181387}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.26, y: 0, z: -6.555}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15500,7 +15500,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.9604567, b: 0.8160377, a: 1}
-  m_Intensity: 1
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -15558,13 +15558,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605942470}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3.0487013, y: 1.3583536, z: -6.604086}
+  m_LocalRotation: {x: 0.6125814, y: -0.35319135, z: 0.6125814, w: 0.35319135}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1291969825}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 120.06799, y: -90, z: 0}
 --- !u!1001 &1609774109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19810,8 +19810,8 @@ MonoBehaviour:
   _timeMultiplier: 2000
   _startHour: 12
   _sunLight: {fileID: 1605942472}
-  _sunsetHour: 7
-  _sunriseHour: 21
+  _sunsetHour: 21
+  _sunriseHour: 7
   _dayAmbientLight: {r: 0.5686275, g: 0.5882353, b: 0.6862745, a: 0}
   _nightAmbientLight: {r: 0.15686275, g: 0.3137255, b: 0.39215687, a: 0}
   _lightChangeCurve:
@@ -19847,7 +19847,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _maxSunLightIntensity: 1
+  _maxSunLightIntensity: 2
   _moonLight: {fileID: 356181388}
   _maxMoonLightIntensity: 0.5
 --- !u!4 &2089471121
