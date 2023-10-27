@@ -118,14 +118,16 @@ public class TimeController : MonoBehaviour
 
     public void SetNight()
     {
-        _sunLight.intensity = 0;
+        _sunLight.gameObject.SetActive(false);
+        _moonLight.gameObject.SetActive(true);
         _startHour = 0;
-        RenderSettings.sun = null;
+        RenderSettings.sun = _moonLight;
     }
 
     public void SetLight()
     {
-        _sunLight.intensity = 2;
+        _sunLight.gameObject.SetActive(true);
+        _moonLight.gameObject.SetActive(false);
         _startHour = 12;
         RenderSettings.sun = _sunLight;
     }    
