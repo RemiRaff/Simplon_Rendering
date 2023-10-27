@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FabricLeather_04
+  m_Name: FabricLeather_06
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -135,6 +135,6 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.5566038, g: 0.40588123, b: 0.1496529, a: 1}
     - _Color: {r: 0.5566037, g: 0.4058812, b: 0.14965287, a: 1}
-    - _EmissionColor: {r: 0.18867922, g: 0.15267482, b: 0.10946955, a: 1}
+    - _EmissionColor: {r: 0.2735849, g: 0.2579054, b: 0.23874155, a: 1}
     - _SpecColor: {r: 0.34509805, g: 0.34509805, b: 0.34509805, a: 1}
   m_BuildTextureStacks: []
