@@ -15,19 +15,19 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Change static views
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.PageDown))
         {
             _teleport.Next();
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.Delete))
         {
             _teleport.Back();
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.Home))
         {
             _timeController.SetLight();
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.End))
         {
             _timeController.SetNight();
         }
