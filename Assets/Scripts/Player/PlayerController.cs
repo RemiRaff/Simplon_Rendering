@@ -5,6 +5,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] PlayerTeleport _teleport;
     [SerializeField] TimeController _timeController;
 
+    [SerializeField] PlayerCam _playerCam;
+
+    [SerializeField] PlayerMove _playerMove;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,7 @@ public class PlayerController : MonoBehaviour
         {
             _teleport.Back();
         }
+        // Change day/night
         if (Input.GetKeyDown(KeyCode.Home))
         {
             _timeController.SetLight();
@@ -38,6 +43,20 @@ public class PlayerController : MonoBehaviour
                 _timeController.StopTime();
             else
                 _timeController.StartTime();
+        }
+        // mouse button locks cursor
+        if (Input.GetMouseButtonDown(0))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        // in cursor locked, player controls camera with mouse/keyboard
+        if (!Cursor.visible)
+        {
+            // mouse controls camera rotation
+            _playerCam.MoveCamera(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+            // keyboards controls camera moving
+            _playerMove.Move(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         }
     }
 }
