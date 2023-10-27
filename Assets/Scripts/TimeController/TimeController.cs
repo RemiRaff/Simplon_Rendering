@@ -120,11 +120,13 @@ public class TimeController : MonoBehaviour
     {
         _sunLight.intensity = 0;
         _startHour = 0;
+        RenderSettings.sun = null;
     }
 
     public void SetLight()
     {
         _sunLight.intensity = 2;
         _startHour = 12;
+        RenderSettings.sun = _sunLight;
     }    
 }
