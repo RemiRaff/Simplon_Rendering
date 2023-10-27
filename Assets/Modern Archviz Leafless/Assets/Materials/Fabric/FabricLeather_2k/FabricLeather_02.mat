@@ -12,12 +12,13 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _EMISSION
   - _NORMALMAP
   - _PARALLAXMAP
   - _SPECULAR_SETUP
   m_InvalidKeywords:
   - _METALLICGLOSSMAP
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -119,10 +120,10 @@ Material:
     - _WorkflowMode: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.32941175, g: 0.29019606, b: 0.22352937, a: 1}
-    - _Color: {r: 0.32941172, g: 0.29019603, b: 0.22352934, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.5294118, g: 0.5294118, b: 0.5294118, a: 1}
+    - _BaseColor: {r: 0.16981131, g: 0.117746525, b: 0.117746525, a: 1}
+    - _Color: {r: 0.16981128, g: 0.117746495, b: 0.117746495, a: 1}
+    - _EmissionColor: {r: 0.047169805, g: 0.046502307, b: 0.046502307, a: 1}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &722705772941470514
 MonoBehaviour:
